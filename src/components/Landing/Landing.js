@@ -17,7 +17,10 @@ const Landing = ({portfolioData}) => {
             </div>
             <div id="landing-bottom">
                 <div className="full-flex-row">
-                    <div id="landing-image-container">placeholder for image</div>
+                    <div id="landing-image-container">
+                        {/* <img src={aboutMe.profileImgUrl} /> */}
+                        <img src={aboutMe.landingImageUrl} />
+                    </div>
                     <h1>{aboutMe.name}</h1>
                 </div>
                 <div className="full-flex-row">

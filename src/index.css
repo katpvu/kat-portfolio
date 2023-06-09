@@ -96,5 +96,15 @@ a:link, a:visited {
 
     .subheading {
         text-align: center;
+      
+    }
+
+
+}
+
+@media (max-width: 750px) {
+    .header-title {
+        font-size: 12vw;
+        width: 100%;
     }
 }

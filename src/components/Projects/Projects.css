@@ -151,11 +151,27 @@
         justify-content: space-evenly;
         gap: 30px;
     }
-
     #projects-page-wrapper {
-        
         gap: 20px;
     }
+
+    #projects-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project-card {
+        /* flex-direction: row; */
+        width: 100%;
+    }
+    .project-card-img-container{
+        min-width: 70%;
+        min-height: auto;
+    }
+    .skills-table-row {
+        flex-direction: column;
+    }
+
 }
 
 @media (max-width: 635px) {

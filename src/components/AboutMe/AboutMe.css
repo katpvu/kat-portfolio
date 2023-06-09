@@ -1,3 +1,40 @@
 #about-me-wrapper {
-    height: 70vh;
+    margin-top: 40px;
+    min-height: 70vh;
+    height: auto;
+    width: 100%;
+}
+
+#about-me-wrapper h1 {
+    display: inline-block;
+    margin-right: 150px;
+}
+
+.strong {
+    font-weight: 600;
+}
+#about-me-wrapper p {
+    display: inline;
+    /* font-family: 'Archivo', sans-serif; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    /* line-height: 53px; */
+    letter-spacing: 0.015em;
+    
+}
+
+#about-me-wrapper h2 {
+    margin-top: 40px;
+    font-size: 22px;
+}
+
+@media (max-width: 840px) {
+    #about-me-wrapper p {
+        font-size: 120%;
+    }
+
+    #about-me-wrapper h2 {
+        font-size: 90%;
+    }
 }

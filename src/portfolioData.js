@@ -4,9 +4,10 @@ let portfolioData = {
       "initials": "kv",
       "role": "Software Engineer",
       "roleDescription": "",
-      "aboutme": "Hi there! I am a full-stack web developer who finds thrill in designing and developing web applications from scratch. With a blend of creativity and technical expertise, I thrive on the excitement of transforming ideas into functional and visually appealing websites. I have a deep appreciation for the art of design, constantly seeking innovative ways to create user-friendly interfaces that enhance the overall user experience. Oh, and I also love to crochet and knit! :)",
+      "aboutme": "Hi there! I am a full-stack web developer who finds thrill in designing and developing web applications from scratch. With a blend of creativity and technical expertise, I thrive on the excitement of transforming ideas into functional and visually appealing websites. I have a deep appreciation for the art of design, constantly seeking innovative ways to create user-friendly interfaces that enhance the overall user experience.",
       "location": "San Jose, CA",
       "profileImgUrl": "images/smaller-prof.jpg",
+      "landingImageUrl": "images/papery-forbidden-content-1.png"
     },
     "socialLinks":[
         {

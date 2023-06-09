@@ -13,7 +13,6 @@ export const SkillsChart = ({ portfolioData }) => {
                 </div>
             ))}
         </div>
-
     </section>
     </>);
 };
