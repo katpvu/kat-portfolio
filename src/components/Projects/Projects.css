@@ -4,23 +4,70 @@
     flex-direction: column;
     gap: 30px;
     line-height: 1.4;
-    padding: 0px 30px;
+    width: 80%;
+    margin: 0 auto;
+    /* padding: 0px 30px; */
+}
+
+#projects-wrapper {
+    /* margin: 30px 0px; */
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#projects-wrapper .header-title {
+    text-align: right;
 }
 
 .project-thumb {
-    min-width: 380px;
-    max-width: 380px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0%;
 }
 
 .project-card {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    gap: 2px;
+    width: 32.5%;
+    /* width: calc(33.3vw - 39px); */
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1.2;
+    /* width: 361px; */
+}
+
+.project-details h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.045em;
+}
+
+.project-details p {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 20px;
+    letter-spacing: -0.045em;
 }
 
 #projects-container {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    width: 100%;
+    justify-content: space-between;
+    
 }
 
 .btns-container {
@@ -41,8 +88,8 @@
 
 .projects-btn:hover {
     /* color: rgb(236, 236, 228); */
-    color: rgb(2, 99, 2);
-    background-color: rgb(139, 218, 181);
+    color: rgb(30, 60, 196);
+    background-color: rgb(189, 218, 255);
     border: 1px solid transparent
 
 }
@@ -63,21 +110,27 @@
 }
 
 #projects-nav li {
-    color: rgb(187, 186, 186);
+    color: rgb(175, 177, 144);
     cursor: pointer;
     transition: 0.3s all ease;
+    line-height: 0.9;
 }
 
 #projects-nav li:hover {
-    color: rgb(146, 145, 145);
+    color: rgb(143, 146, 110);
+}
+
+.project-card-img-container {
+    width: 100%;
+    min-height: 391px;
 }
 
 .active {
-    color: rgb(2, 99, 2) !important;
+    color: rgb(241, 210, 70) !important;
 }
 
 .project-img-full {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     margin-bottom: 40px;
 }
@@ -91,6 +144,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 
 @media (max-width: 1050px) {
     #projects-nav {

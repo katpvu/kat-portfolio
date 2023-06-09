@@ -4,13 +4,12 @@ import "./Navigation.css"
 export const Navigation = () => {
     return (
         <>
-        <nav>
+        <nav id="nav-bar">
             <ul>
-                <li><Link to='/'>Home</Link></li>
-                <li>
-                    <Link to={`/projects`}>Projects</Link>
-                </li>
-                <li><Link to="#">Gallery</Link></li>
+                <li>about</li>
+                <li>skills</li>
+                <li>projects</li>
+                <li>contact</li>
             </ul>
         </nav>
         </>

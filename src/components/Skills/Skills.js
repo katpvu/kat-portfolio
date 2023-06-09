@@ -18,7 +18,7 @@ const Skills = ({ portfolioData, techstack }) => {
 
     return (
         <section id="skills-container">
-            {!techstack && <h1 className="subheading">Skills</h1>}
+            {!techstack && <h1 className="header-title">Skills</h1>}
             {/* {windowSize.width <= 555 && <marquee>} */}
             {/* <marquee> */}
             <ul id="skills-flexbox">

@@ -17,3 +17,24 @@
 #skills-flexbox p {
     font-family: 'Source Code Pro', monospace;
 }
+
+
+/* skills chart */
+#skills-chart-container {
+    width: 100%;
+    /* display: flex; */
+    gap: 20px;
+}
+
+.skills-table-row {
+    display: flex;
+    border-top: 1px solid black;
+    padding: 10px 20px;
+
+}
+
+.skills-table-row h6 {
+    width: 250px;
+    font-weight: 700;
+    
+}

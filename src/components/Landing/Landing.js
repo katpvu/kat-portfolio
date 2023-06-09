@@ -1,21 +1,31 @@
 
 import "./Landing.css"
-import Navigation from '../Navigation/Navigation';
 import Footer from '../Footer/Footer';
+
 const Landing = ({portfolioData}) => {
     const { aboutMe } = portfolioData;
 
     return (
         <>
         <section id="landing-root">
-            <div>
-                <div id="profile-img">
+            <div id="landing-top">
+                {/* <div id="profile-img">
                     <img src={aboutMe.profileImgUrl} alt="profile"/>
-                </div>
-                <h1>{aboutMe.name}</h1>
+                </div> */}
+                <h1 id="initials" className="header">{aboutMe.initials}.</h1>
+                <h1 id="role">{aboutMe.role}</h1>
             </div>
-            <Navigation />
-            <Footer portfolioData={portfolioData}/>
+            <div id="landing-bottom">
+                <div className="full-flex-row">
+                    <div id="landing-image-container">placeholder for image</div>
+                    <h1>{aboutMe.name}</h1>
+                </div>
+                <div className="full-flex-row">
+                    <p>Loremasdjoaisdjasiodsaodjiosadjoiasjdoiasdjaos</p>
+                </div>
+
+            </div>
+            {/* <Footer portfolioData={portfolioData}/> */}
         </section>
         </>
     );

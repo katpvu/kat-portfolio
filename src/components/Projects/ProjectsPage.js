@@ -7,23 +7,16 @@ import { useEffect, useState } from "react";
 
 export const ProjectPage = ({portfolioData}) => {
     const { projects } = portfolioData;
-    const location = useLocation();
-    const { num } = location.state;
 
     const [currentProject, setCurrentProject] = useState(projects[0]);
     const [currentIndex, setCurrentIndex] = useState(0) 
 
-    useEffect(() => {
-        return () => {
-            setCurrentIndex(num);
-            setCurrentProject(projects[num]);
-        };
-    }, [])
+    // useEffect(() => {
+    //     return () => {
+    //         setCurrentProject(projects[num]);
+    //     };
+    // }, [])
 
-    useEffect(() => {
-        setCurrentIndex(num)
-        setCurrentProject(projects[num]);
-    }, [num])
 
     const handleProjectNavClick = (i) => {
         setCurrentProject(projects[i]);
@@ -48,6 +41,7 @@ export const ProjectPage = ({portfolioData}) => {
             }
             </ul>
             {/* <div className="project-card" > */}
+                <img className="project-img-full" src={currentProject.imgurl} alt={currentProject.name} />
                 <div className="project-header-container">
                     <h2>{currentProject.name}</h2>
                     <div className="btns-container">
@@ -60,7 +54,6 @@ export const ProjectPage = ({portfolioData}) => {
                     <h3>Techstack:</h3>
                     <Skills portfolioData={portfolioData} techstack={currentProject.techstack}/>
                 </div>
-                <img className="project-img-full" src={currentProject.imgurl} alt={currentProject.name} />
             {/* </div> */}
         </section>
         </>

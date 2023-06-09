@@ -6,7 +6,7 @@ const AboutMe = ({portfolioData}) => {
     return (
         <>
         <header id="about-me-wrapper">
-            <h1 className="subheading">About Me</h1>
+            <h1 className="header-title">About Me</h1>
             
             <Typical
                     steps={['Hello', 1000, 'Hello world!', 500]}

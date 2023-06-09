@@ -1,0 +1,9 @@
+#nav-bar {
+    height: 100vh;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    text-align: right;
+    min-width: 100px;
+    max-width: 100px;
+}
