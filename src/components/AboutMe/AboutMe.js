@@ -30,7 +30,7 @@ const AboutMe = ({portfolioData}) => {
            
             <h2>In my free time, I also find immense joy in the art of crochet and knitting. For me, these crafts are more than just hobbies; <span style={{fontWeight: '600'}} >they are gateways to a world of creativity, expression, and endless possibilities.</span> From a simple ball of yarn, I am able to make it into a beautiful, functional piece, very similar to how I can create web applications with code!</h2>
 
-            <div id="gallery-option-container">
+            <div id="gallery-option-container" >
                 <h4>here are some life snippets, just for fun.. </h4>
                 <div id="gallery-btn" onClick={handleGalleryOpen}>
                     {!openGallery ? "view gallery" : "collapse gallery"}
@@ -38,7 +38,7 @@ const AboutMe = ({portfolioData}) => {
                 </div>
             </div>
             {openGallery &&
-            <div id="gallery-container">
+            <div id="gallery-container" className={openGallery ? "open-gallery" : ""}>
                 {galleryImages.map((image, i) => (
                     <img src={image} alt="gallery-item" />
                 ))}
