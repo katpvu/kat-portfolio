@@ -3,7 +3,7 @@ import "./Skills.css"
 export const SkillsChart = ({ portfolioData }) => {
     const { categorizedSkills } = portfolioData;
     return (<>
-    <section id="skills-chart-container">
+    <section id="skills">
         <h1 className="header-title">Skills</h1>
         <div id="skills-table">
             {categorizedSkills.map((item, i) => (

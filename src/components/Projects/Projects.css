@@ -1,25 +1,16 @@
-#projects-page-wrapper {
-    margin-top: 90px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    line-height: 1.4;
-    width: 80%;
-    margin: 0 auto;
-    /* padding: 0px 30px; */
-}
-
-#projects-wrapper {
-    /* margin: 30px 0px; */
+#projects {
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    box-sizing: border-box;
+    margin-top: 70px;
 }
 
-#projects-wrapper .header-title {
+#projects .header-title {
     text-align: right;
+    padding-top: 70px;
 }
 
 .project-thumb {
@@ -123,6 +114,32 @@
 .project-card-img-container {
     width: 100%;
     min-height: 391px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.project-details h3 {
+    margin: 10px 0px;
+}
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(24, 23, 23, 0) 0%, #292828 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: 0.2s all ease;
+}
+
+.image__overlay:hover {
+    opacity: 1;
 }
 
 .active {
@@ -130,9 +147,12 @@
 }
 
 .project-img-full {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 40px;
+    max-height: 70vh;
+    object-fit: cover;
+    object-position: 0% 0%;
 }
 
 .tech-stack-div {
@@ -145,6 +165,16 @@
     justify-content: space-between;
 }
 
+#image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+}
 
 @media (max-width: 1050px) {
     #projects-nav {

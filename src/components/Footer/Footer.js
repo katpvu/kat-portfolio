@@ -1,18 +1,20 @@
 import "./Footer.css";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { HiOutlineMail } from "react-icons/hi"
+import { HiOutlineMail, HiOutlineNewspaper } from "react-icons/hi";
+import { FaAngellist } from "react-icons/fa"
 
-export const Footer = ({portfolioData}) => {
+export const Footer = ({portfolioData, nav=false}) => {
     const { socialLinks } = portfolioData;
-    const icons = [<BsGithub/>, <BsLinkedin/>]
+    const icons = [<BsGithub/>, <BsLinkedin/>, <HiOutlineMail/>, <FaAngellist />, <HiOutlineNewspaper />]
     return (
-        <section id="social-links-wrapper">
-            <h1>Contact</h1>
-            <div id="social-links-btns-container">
+        <section id="contact">
+            {!nav && <h1 className="header-title">Contact</h1>}
+            <div id="social-links-btns-container" className={nav ? "column" : "row"}>
             {socialLinks.map((social, i) => {
                 return (
                 <a href={social.url} target="_blank">
-                    {icons[i]}
+                    {icons[i]}<br></br>
+                    {!nav && <p>{social.name}</p>}
                 </a>
                 )
             })}

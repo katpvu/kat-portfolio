@@ -8,13 +8,12 @@ import Navigation from "./components/Navigation/Navigation";
 function App() {
   return (
     <>
-    {/* <Main portfolioData={portfolioData}/> */}
     <Routes>
-      {/* <Route path="/projects" element={<ProjectPage portfolioData={portfolioData}/>} /> */}
+      <Route path="/projects" element={<ProjectPage portfolioData={portfolioData}/>} />
       <Route exact path="/" element={<Main portfolioData={portfolioData}/>} />
       
     </Routes>
-    <Navigation />
+    <Navigation portfolioData={portfolioData}/>
 
     </>
   );

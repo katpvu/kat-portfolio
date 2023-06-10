@@ -1,6 +1,6 @@
 
 import "./Landing.css"
-import Footer from '../Footer/Footer';
+import Typical from 'react-typical';
 
 const Landing = ({portfolioData}) => {
     const { aboutMe } = portfolioData;
@@ -12,19 +12,25 @@ const Landing = ({portfolioData}) => {
                 {/* <div id="profile-img">
                     <img src={aboutMe.profileImgUrl} alt="profile"/>
                 </div> */}
-                <h1 id="initials" className="header">{aboutMe.initials}.</h1>
+                <h1 id="name" className="header">{aboutMe.name}.</h1>
                 <h1 id="role">{aboutMe.role}</h1>
             </div>
             <div id="landing-bottom">
                 <div className="full-flex-row">
+                    <p id="typical-text">Oh hi! I was just 
+                        <Typical
+                        steps={['working on some projects!', 3000, "looking into new tools and technologies", 3000]}
+                        loop={Infinity}
+                        wrapper="p"
+                        />
+                    </p>
                     <div id="landing-image-container">
                         {/* <img src={aboutMe.profileImgUrl} /> */}
                         <img src={aboutMe.landingImageUrl} />
                     </div>
-                    <h1>{aboutMe.name}</h1>
                 </div>
                 <div className="full-flex-row">
-                    <p>Loremasdjoaisdjasiodsaodjiosadjoiasjdoiasdjaos</p>
+                    
                 </div>
 
             </div>

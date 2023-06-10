@@ -20,7 +20,7 @@
 
 
 /* skills chart */
-#skills-chart-container {
+#skills {
     width: 100%;
     /* display: flex; */
     gap: 20px;
@@ -28,7 +28,11 @@
     height: 50vh;
 }
 
-#skills-chart-container .skills-table-row:last-child{
+#skills h1 {
+    padding-top: 70px;
+}
+
+#skills .skills-table-row:last-child{
     border-bottom: 1px solid black;
 }
 .skills-table-row {

@@ -1,7 +1,4 @@
 import "./Projects.css";
-
-import { Link } from "react-router-dom";
-import Skills from "../Skills/Skills";
 import { TfiGithub } from "react-icons/tfi";
 import { BsBoxArrowUpRight } from "react-icons/bs"
 
@@ -9,7 +6,7 @@ const ProjectsIndex = ({portfolioData}) => {
     const { projects } = portfolioData;
     return (
         <>
-        <section id="projects-wrapper">
+        <section id="projects">
             <h1 className="header-title">PROJECTS</h1>
             <div id="projects-container">
             {projects && projects.map((project, i) => (
@@ -20,14 +17,15 @@ const ProjectsIndex = ({portfolioData}) => {
                     <div className="project-details">
                         <h2>0{i+1} {project.name}</h2>
                         <p>{project.shortDescription}</p>
-                        {/* <div>
-                            <h3>Techstack:</h3>
-                            <Skills portfolioData={portfolioData} techstack={project.techstack}/>
-                        </div> */}
-                        {/* <div className="btns-container">
+                        <div>
+                            <h3>Techstack: {project.techStackSingleLine}</h3>
+                            
+                            {/* <Skills portfolioData={portfolioData} techstack={project.techstack}/> */}
+                        </div>
+                        <div className="btns-container">
                             <a href={project.liveLink} target="_blank" className="projects-btn">Live <BsBoxArrowUpRight /></a>
                             <a href={project.sourceCode} target="_blank" className="projects-btn"><TfiGithub /> Source Code</a>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             ))}
