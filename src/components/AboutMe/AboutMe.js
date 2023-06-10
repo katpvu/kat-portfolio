@@ -1,10 +1,22 @@
 
 import { Link } from "react-router-dom";
 import "./AboutMe.css"
-import { BsArrowRight } from 'react-icons/bs'
+import { BsArrowDown, BsArrowUp } from 'react-icons/bs'
+import { useState } from "react";
 
 const AboutMe = ({portfolioData}) => {
-    const { aboutMe } = portfolioData;
+    const { aboutMe, galleryImages } = portfolioData;
+
+    const [openGallery, setOpenGallery] = useState(false);
+
+    const handleGalleryOpen = () => {
+        if (openGallery) {
+            setOpenGallery(false);
+        } else if (!openGallery) {
+            setOpenGallery(true);
+        };
+    };
+
     return (
         <>
         <header id="about">
@@ -19,9 +31,19 @@ const AboutMe = ({portfolioData}) => {
             <h2>In my free time, I also find immense joy in the art of crochet and knitting. For me, these crafts are more than just hobbies; <span style={{fontWeight: '600'}} >they are gateways to a world of creativity, expression, and endless possibilities.</span> From a simple ball of yarn, I am able to make it into a beautiful, functional piece, very similar to how I can create web applications with code!</h2>
 
             <div id="gallery-option-container">
-                <h4>visuals of my life, just for fun.. </h4>
-                <Link to="/gallery" id="gallery-btn">view gallery <BsArrowRight/></Link>
+                <h4>here are some life snippets, just for fun.. </h4>
+                <div id="gallery-btn" onClick={handleGalleryOpen}>
+                    {!openGallery ? "view gallery" : "collapse gallery"}
+                    {!openGallery ? <BsArrowDown/> : <BsArrowUp />} 
+                </div>
             </div>
+            {openGallery &&
+            <div id="gallery-container">
+                {galleryImages.map((image, i) => (
+                    <img src={image} alt="gallery-item" />
+                ))}
+            </div>
+            }
         </header>
         </>
     );

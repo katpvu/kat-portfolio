@@ -16,13 +16,10 @@
 }
 #about p {
     display: inline;
-    /* font-family: 'Archivo', sans-serif; */
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
-    /* line-height: 53px; */
     letter-spacing: 0.015em;
-    
 }
 
 #about h2 {
@@ -44,8 +41,28 @@
     font-size: 24px;
     font-weight: 700;
     cursor: pointer;
-    margin-bottom: 90px;
+    margin-bottom: 10px;
 }
+
+#gallery-container {
+    height: 300px; 
+    /* width: 100%;
+    /* height: 100%;
+    width: 300px; */
+    display: flex;
+    /* flex-direction: column; */
+    margin-bottom: 90px;
+    overflow-x:scroll;
+    /* transform: rotate(-90deg); */
+}
+
+#gallery-container img {
+    height: 100%;
+    /* width: 100%; */
+    /* transform: rotate(90deg); */
+}
+
+
 
 @media (max-width: 840px) {
     #about p {

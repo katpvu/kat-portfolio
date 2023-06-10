@@ -1,3 +1,11 @@
+function parseGalleryImages() {
+  let galleryImages = [];
+  for (let i = 18; i >= 1; i--) {
+    galleryImages.push(`images/gallery/gallery-${i}.JPG`)
+  };
+  return galleryImages;
+};
+
 let portfolioData = {
     "aboutMe": {
       "name": "Kat Vu",
@@ -9,9 +17,7 @@ let portfolioData = {
       "profileImgUrl": "images/smaller-prof.jpg",
       "landingImageUrl": "images/papery-forbidden-content-1.png"
     },
-    "galleryImages": [
-
-    ],
+    "galleryImages": parseGalleryImages(),
     "socialLinks":[
         {
           "name": "linkedin",
